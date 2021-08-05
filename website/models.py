@@ -1,8 +1,8 @@
 from django.db import models
 
 class Website(models.Model):
-    name = models.CharField(max_length=100)
-    url = models.CharField(max_length=100)
+    website_name = models.CharField(max_length=100)
+    website_url = models.URLField(max_length=50)
     username = models.CharField(max_length=100)
     password = models.CharField(max_length=100)
     user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
