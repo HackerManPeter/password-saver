@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 class Website(models.Model):
     website_name = models.CharField(max_length=100)
@@ -11,4 +12,4 @@ class Website(models.Model):
         return self.website_name
     
     def get_absolute_url(self):
-        pass
+        return reverse('website:detail', args=[str(self.pk)])
