@@ -8,7 +8,7 @@ class Website(models.Model):
     user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.name
+        return self.website_name
     
     def get_absolute_url(self):
         pass
