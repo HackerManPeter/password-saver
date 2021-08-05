@@ -1,0 +1,12 @@
+{% extends 'website\base.html' %}
+
+{% block content %}
+    <h1>{{ website.website_name }}</h1>
+    <p>{{ website.website_url }}</p>
+    <p>{{ website.username }}</p>
+
+    <div>
+        <p><h3><a href="{% url 'website:edit' website.pk %}">Edit info</a></h3></p>
+        
+    </div>
+{% endblock content %}
