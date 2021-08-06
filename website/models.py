@@ -12,4 +12,4 @@ class Website(models.Model):
         return self.website_name
     
     def get_absolute_url(self):
-        return reverse('website:detail', args=[str(self.pk)])
+        return reverse('website:detail', args=[str(self.id)])
