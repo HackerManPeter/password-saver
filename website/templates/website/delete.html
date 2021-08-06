@@ -1,0 +1,8 @@
+{% extends 'website\base.html' %}
+
+{% block content %}
+    <form action="" method="POST">{% csrf_token %}
+        Are you sure you want to delete "{{ website.website_name }}"?
+        <p><input type="submit" value="Delete"></p>
+    </form>
+{% endblock content %}
