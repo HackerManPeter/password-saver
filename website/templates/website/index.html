@@ -4,7 +4,7 @@
     <ul>
         {% for site in website %}
             <li>
-                <h1><a href="{% url 'website:detail' site.pk %}">{{ site.website_name }}</a></h1>
+                <h3><a href="{% url 'website:detail' site.pk %}">{{ site.website_name }}</a></h3>
                 <p><a href="{{ site.website_url }}" target="_blank">Visit site -></a></p>
             </li>
         {% endfor %}
